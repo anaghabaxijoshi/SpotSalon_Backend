@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Registration-SpotSalon
+{% endblock title %}
+
+{% block head %}
+    {{ super() }}
+{% endblock head %}
+
+{% block content %}
+<section class="row">
+   <!-- <article class="col-3">
+        <img src="../images/staff3.jpeg" alt="Staff image" id="imageproperty">
+        
+    </article>-->
+    <aside class="col-12">
+        <img src="../static/images/staff3.jpeg" alt="Staff image" id="imageproperty">
+        <h2 id="articleh2">Registration Form</h2>
+        <form action="" method="post" name="businessinfo" onsubmit= "return validatebusinessinfo();" autocomplete="on">
+            
+            <fieldset class="owner-registration-asidefieldset">
+                <legend>Fill up the Form</legend>
+                <label for="businessname">Business Name: &nbsp;</label><br>
+                    <input type="text" name="businessname" id="businessname"><span id="businessnameerr"></span><br><br> 
+                <label for="registrationno">Registration No: &nbsp;</label><br>
+                    <input type="text" name="registrationno" id="registrationno"><span id="registrationnoerr"></span><br><br>
+                <label for="email">Email : &nbsp;</label><br>
+                    <input type="email" name="email" id="email"><span id="emailerr"></span><br><br>
+                <label for="phone">Phone No: &nbsp;</label><br>
+                    <input type="tel" name="phone" id="phone" placeholder="1234-567-8912" 
+                    pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}"><span id="phoneerr"></span><br><br>
+                <label for="rdate">Date: &nbsp;</label><br>
+                    <input type="date" name="rdate" id="rdate"><span id="dateerr"></span><br><br>
+                <label for="businessaddress">BusinessAddress :&nbsp;</label><br>
+                    <textarea name="businessaddress" id="businessaddress" cols="30" rows="10"></textarea><br><br>
+                <label for="country">Country: &nbsp;</label><br>
+                    <input type="text" name="country" id="country" ><span id="countryerr"></span><br><br>
+                <label for="state">State: &nbsp;</label>   <br>
+                    <input type="text" name="state" id="state"><span id="stateerr"></span><br><br>
+                <label for="city">City: &nbsp;</label>  <br>
+                    <input type="text" name="city" id="city" ><span id="cityerr"></span><br><br>
+                <label for="pwd">Enter Password: &nbsp;</label><br>
+                    <input type="password" name="pwd" id="pwd" onsubmit=" return validatepwd();"><span id="pwderr"></span><br>
+                <small style="color: blue;">Password must contain digit, capital letter and special character</small><br><br>    
+                <label for="cpwd">Confirm Password: &nbsp;</label><br>
+                    <input type="password" name="cpwd" id="cpwd"><span id="cpwderr"></span><br><br><br>
+                <!--<input type="submit" name="Register" id=" allbuttons">-->
+                <button type="submit" id="allbuttons">Register</button>
+        </fieldset>
+        </form>
+    </aside>
+</section>
+{% endblock content %}
+
+{% block javascript %}
+{{ super() }}
+{% endblock javascript %}
+
+{% block footer %}
+{{ super() }}
+{% endblock footer %}
