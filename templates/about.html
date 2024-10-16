@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block head %}
+    {{ super() }}
+{% endblock head %}
+
+<!---Defines the title for the page--->
+{% block title %}
+    SpotSalon-About
+{% endblock title %}
+
+{% block content %}
+<section class="row">
+    <article class="col-12">
+        <img src="../static/images/staff3.jpeg" alt="Staff image" id="imageproperty">
+        <h2 id="articleh2">About SpotSalon</h2>
+            <p id="aboutparagraph">The Spot Saloon Services Management system is designed to bridge the 
+                gap between customers seeking salon services and salon business owners who wish to promote
+                 their offerings online. The primary goal of this web-based platform is to provide a 
+                 comprehensive and user-friendly interface where customers can discover and connect with 
+                 salons in their region, while salon owners can list their services and manage their 
+                 online presence.
+            </p>
+    </article>
+</section>
+{% endblock content %}
+
+{% block script %} {{ super() }} {% endblock script %}
+{% block footer %} {{ super() }} {% endblock footer %}

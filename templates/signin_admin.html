@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block head %}
+    {{ super() }}
+{% endblock head %}
+
+<!---Defines the title for the page--->
+{% block title %}
+    SpotSalon-Admin-Signin
+{% endblock title %}
+
+
+{% block content %}
+<section class="row"> 
+    <aside class="col-12">
+        <img src="../static/images/staff3.jpeg" alt="Staff image" id="imageproperty">
+        <form action="#" method="post" name="businesssignin" onsubmit=" return validatebusinesssignin();" autocomplete="off">
+            <h2 id="signinh2">SpotSalon Admin Account</h2>
+            <fieldset id="signin">
+                <!--<legend>SpotSalon Account</legend>-->
+                <span id="usernamepwderr"></span><br>
+                <label for="username">Username</label>
+                <input type="email" name="username" id="username"><br><br>
+                <label for="pwd">Password</label>
+                <input type="password" name="pwd" id="pwd"><br>
+                
+                Forgot Password? <a href="#">Click here</a><br></br>
+                <!--<input type="submit" value="Sign In" id="allbuttons">-->
+                <button type="submit" id="allbuttons">Sign In</button>
+                <div id="rgtnlink">
+                    <a href="/registration_business">Sign Up your to the SpotSalon?</a>
+                </div>
+            </fieldset>
+        </form>
+    </aside>
+</section>
+{% endblock content %}
+
+<!-- {% block script %} {{ super() }} {% endblock script %}
+{% block footer %} {{ super() }} {% endblock footer %} -->

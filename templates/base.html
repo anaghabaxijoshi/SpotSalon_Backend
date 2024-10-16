@@ -1,0 +1,53 @@
+<!doctype HTML>
+<html>
+<head>
+{% block head %} {% endblock head %}
+  <!--Describe the character set for the web page-->
+<meta charset="utf-8">
+<!---keywords for the search engine--->
+<meta name="keywords" content="HTML 5 CSS 3 JAVASCRIPT">
+<!--Description for the web page-->
+<meta name="description" content="Dynamic Web Development">
+<!--Author of the page-->
+<meta name="author" content="Anagha">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="../static/main.css">
+
+<!---Defines the title for the page--->
+<title> {% block title %}  {% endblock title %}</title>
+
+</head>
+
+<body>
+    <section class="row">
+        <header>
+            <h1 id="animate">SpotSalon</h1>
+        </header>
+        <nav class="col-12">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/signin_business_account">Business Account</a></li>
+                <li><a href="/signin_admin">Admin Account</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li class="list_logout"><a href="/">{% block list %} {% endblock list %}</a></li> 
+            </ul>
+        </nav>
+    </section>
+    <div>
+        {% block content %}
+        {% endblock content %}
+    </div>
+    <section>
+        {% block script %}{% endblock script %}
+        <script src="../static/validatebusinessinfo.js"></script>
+        
+        {% block footer %} {% endblock footer %}
+        <footer>
+            &copy; Copyright 2024 by <a href="https://school.mildredgroup.com">SpotSalon</a>
+        </footer>
+       
+    </section>
+    
+</body>

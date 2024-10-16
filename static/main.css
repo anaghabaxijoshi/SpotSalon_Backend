@@ -1,0 +1,349 @@
+*{
+    box-sizing: border-box;
+  }
+  .row::after
+  {
+    content: "";
+    clear: top;
+    display: table;
+  }
+
+  [class*="col-"]
+  {
+    float: left;
+    padding: 10px;
+  }
+  
+  .col-1
+  {
+    width: 8.88%;
+  }
+  .col-2
+  {
+    width: 16.66%;
+  }
+  .col-3
+  {
+    width: 25%;
+  }
+  .col-4
+  {
+    width: 33.33%;
+  }
+  .col-5
+  {
+    width: 41.66%;
+  }
+  .col-6
+  {
+    width: 50%;
+  }
+  .col-7
+  {
+     width: 58.33%;
+  }
+  .col-8
+  {
+    width: 66.66%;
+  }
+  .col-9
+  {
+    width: 75%;
+  }
+  .col-10
+  {
+    width: 83.33%;
+  }
+  .col-11
+  {
+    width: 91.66%;
+  }
+  .col-12
+  {
+    width: 100%;
+  }
+
+[class*= "col-"]
+{
+    width: 100%;
+}
+
+@media only screen and (min-width:600px) 
+{
+  .col-1
+  {
+    width: 8.88%;
+  }
+  .col-2
+  {
+    width: 16.66%;
+  }
+  .col-3
+  {
+    width: 25%;
+  }
+  .col-4
+  {
+    width: 33.33%;
+  }
+  .col-5
+  {
+    width: 41.66%;
+  }
+  .col-6
+  {
+    width: 50%;
+  }
+  .col-7
+  {
+     width: 58.33%;
+  }
+  .col-8
+  {
+    width: 66.66%;
+  }
+  .col-9
+  {
+    width: 75%;
+  }
+  .col-10
+  {
+    width: 83.33%;
+  }
+  .col-11
+  {
+    width: 91.66%;
+  }
+  .col-12
+  {
+    width: 100%;
+  }
+}
+
+body
+{
+    /*background-color: rgb(207, 179, 195);
+    background-image: linear-gradient(to left, white, rgb(232, 211, 233));*/
+    background-image: url(images/texture2.avif);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+@keyframes slide 
+{
+  from { margin-right: 90%; }
+  to { margin-left: 80%; }
+   
+}
+
+#animate
+{
+  animation-name: slide;
+  animation-duration: 10s;
+  animation-delay: 2s;
+  animation-direction: alternate;
+  animation-iteration-count:infinite;
+  text-shadow: 2px 1px 2px yellow;
+
+}
+header
+{
+  background-image: url("images/salonimage.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  position: relative;
+  /*object-fit:fill;*/
+  text-align: center;
+  color: #e61919;
+  margin: auto;
+  padding: 15px;
+  font-size: xx-large;  
+}
+
+
+nav
+{
+  background-color: aqua;
+  position: relative;
+  margin-top: auto;
+  width: 100%;
+  /*padding: 5px;*/
+}
+
+nav li
+{
+  list-style-type: none;
+  padding: 5px;
+  float: left;
+}
+
+nav li a
+{
+  display: inline;
+  text-align: justify;
+  padding: 5px;
+  text-decoration: none;
+  color: rgb(48, 18, 194);
+  margin-left: 15px;
+  font-size: large;
+}
+
+nav li:hover
+{
+  background-color: wheat;
+  color: black;
+  box-shadow: 1px 1px 1px black;
+  transform: scale(1.03, 1.03);
+}
+
+.list_logout
+{
+  float: right;
+}
+
+#imageproperty
+{
+  height: 250px;
+  width: 250px;
+  position: absolute;
+  box-shadow: 2px 2px black;
+  /*z-index: -1;*/
+}
+
+#articleh2
+{
+  margin-left: 280px;
+  color: #7410cb;
+  text-align: justify;
+  text-shadow: 1px 1px  red;
+}
+
+.homearticlefieldset
+{
+  margin: auto;
+  width: 50%;
+  padding: 5px;
+  border: none;
+  font-size: large;
+  float: right;
+}
+
+legend
+{
+  color: #711111;
+  font-size: small;
+}
+
+aside div 
+{
+  margin-top: 15px;
+  width: 70%;
+  height: 20%;
+  padding: 5px;
+  background-color: cadetblue;
+}
+
+aside div a
+{
+  text-decoration: none;
+  color: rgb(217, 236, 45);
+  font-size: large;
+  text-align: center;
+}
+aside div:hover
+{
+  background-color: gray;
+  color: white;
+  box-shadow: 1px 1px white;
+  transform: scale(1.03,1.03 )
+}
+
+/*aside a:hover
+{
+  color: white;
+  background-color: aqua;
+}*/
+
+.salonsignin
+{
+  border: none;
+  float: right;
+
+}
+
+#signin
+{
+  border: none;
+  position: relative;
+  margin-left: auto;
+  text-align: center;
+}
+#signinh2
+{
+  margin-left: auto;
+  color: #7410cb;
+  text-align: center;
+  text-shadow: 1px 1px  red;
+}
+#rgtnlink
+{
+  margin-top: 15px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  height: 20%;
+  padding: 5px;
+  background-color: cadetblue;
+}
+#rgtnlink div a:hover
+{
+  background-color: gray;
+  color: white;
+  box-shadow: 1px 1px white;
+  transform: scale(1.03,1.03 )
+}
+.contactform
+{
+  margin: auto;
+  width: 40%;
+  border-style: groove;
+  border-color: blueviolet;
+  text-align:justify;
+}
+
+#aboutparagraph
+{
+  width: 75%;
+  float: right;
+  padding: 5px;
+}
+
+.owner-registration-asidefieldset
+{
+  margin: auto;
+  width: 50%;
+}
+
+#allbuttons
+{
+  color: white;
+  background-color: grey;
+  width: auto;
+  padding: 10px;
+}
+
+button:hover
+{
+  transform: scale(1.03, 1.03);
+}
+
+span
+{
+  color: red;
+}
+
+ 
+
+ 

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block head %}
+    {{ super() }}
+{% endblock head %}
+
+<!---Defines the title for the page--->
+{% block title %}
+    SpotSalon-Contact
+{% endblock title %}
+
+{% block content %}
+<section class="row">
+    <article class="col-12">
+        <img src="../static/images/staff3.jpeg" alt="Staff image" id="imageproperty">
+        <h2 id="articleh2">Contact us</h2>
+        <form action="" method="post" autocomplete="off">
+            <fieldset class="contactform">
+                <legend>Write Your Query</legend>
+            <label for="customername">Your Fullname: &nbsp;</label><br>
+            <input type="text" name="customername" id="customername"><br><br>
+            <label for="customeremail">Your Email ID: &nbsp;</label><br>
+            <input type="email" name="customeremail" id="customeremail"><br><br>
+            <label for="question">Question: &nbsp;</label><br>
+            <textarea name="question" id="question" cols="30" rows="10"></textarea><br><br>
+            <!--<input type="submit" value="Submit" id="allbuttons">-->
+            <button type="submit" id="allbuttons">Submit</button>
+            </fieldset>
+        </form>
+    </article>
+</section>
+{% endblock content %}
+
+{% block script %} {{ super() }} {% endblock script %}
+{% block footer %} {{ super() }} {% endblock footer %}

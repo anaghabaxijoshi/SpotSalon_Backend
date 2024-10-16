@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block head %}
+    {{ super() }}
+{% endblock head %}
+
+<!---Defines the title for the page--->
+{% block title %}
+    SpotSalon-Index Page
+{% endblock title %}
+
+
+    {% block content %}
+        <section>
+        <article class="col-6">
+            <img src="../static/images/salon1.jpg" alt="Salon image" id="imageproperty">
+            <h2 id="articleh2">Spot your nearby Salon</h2>
+            <form action="/customer_display.html" method="post" autocomplete="off"> 
+                <fieldset class="homearticlefieldset">
+                    <!--<legend>Spot your nearby Salon</legend>-->
+                <label for="country">Country: &nbsp;</label>
+                <select name="country" id="country">
+                    <option value="a">A</option>
+                    <option value="b">B</option>
+                    <option value="c">C</option>
+                </select><br/><br>
+                <label for="state">State: &nbsp;</label> 
+                <select name="country" id="country">
+                    <option value="a">aa</option>
+                    <option value="b">bb</option>
+                    <option value="c">cc</option>
+                </select> <br> <br>
+                <label for="city">City: &nbsp;</label>  
+                <select name="country" id="country">
+                    <option value="a">aaa</option>
+                    <option value="b">bbb</option>
+                    <option value="c">ccc</option>
+                </select><br/><br>
+               <!-- <input type="button" value="Search" id="allbuttons">-->
+                <button type="submit" id="allbuttons">Search</button>
+            </fieldset>
+            </form>
+        </article>
+        <aside class="col-6">
+            <img src="../static/images/staff3.jpeg" alt="Staff image" id="imageproperty">
+            <form action="/home_business" method="post" name="businesssignin" onsubmit=" return validatebusinesssignin();" autocomplete="off">
+                <h2 id="articleh2">SpotSalon Business Account</h2>
+                <fieldset class="salonsignin">
+                    <!--<legend>SpotSalon Account</legend>-->
+                    <span id="usernamepwderr"></span><br>
+                    <label for="username">Username</label>
+                    <input type="email" name="username" id="username"><br><br>
+                    <label for="pwd">Password</label>
+                    <input type="password" name="pwd" id="pwd"><br>
+                    
+                    Forgot Password? <a href="#">Click here</a><br></br>
+                    <!--<input type="submit" value="Sign In" id="allbuttons">-->
+                    <button type="submit" id="allbuttons">Sign In</button>
+                    <div class="rgtnlink">
+                        <a href="/registration_business">Sign Up your Business to the SpotSalon?</a>
+                    </div>
+                </fieldset>
+            </form>
+        </aside>
+    </section>
+    {% endblock content %}
+
+    {% block script %} {{ super() }} {% endblock script %}
+    {% block footer %} {{ super() }} {% endblock footer %}

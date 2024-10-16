@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block head %}
+    {{ super() }}
+{% endblock head %}
+
+<!---Defines the title for the page--->
+{% block title %}
+    SpotSalon-registration-business
+{% endblock title %}
+
+
+{% block content %}
+<section class="row">
+  
+    <aside class="col-12">
+        <img src="../static/images/staff3.jpeg" alt="Staff image" id="imageproperty">
+        <h2 id="articleh2">Business-Name Account</h2>
+        <form action="/home_business" method="post" name="businessinfo" onsubmit= "return validatebusinessinfo();" autocomplete="on">
+            <fieldset class="owner-registration-asidefieldset">
+                <legend>Update Contact Information</legend>
+                <label for="city">City : &nbsp;</label><br>
+                    <input type="city" name="city" id="city"><br><br>
+                <label for="state">State : &nbsp;</label><br>
+                    <input type="state" name="state" id="state"><br><br>
+                <label for="country">Country : &nbsp;</label><br>
+                    <input type="country" name="country" id="country"><br><br>
+                <label for="address">Address : &nbsp;</label><br>
+                    <textarea name="address" id="address" rows="4" cols="50"></textarea><br><br>
+                <label for="open_time">Opening Time : &nbsp;</label><br>
+                    <input type="datetime" name="open_time" id="open_time"><br><br>
+                <label for="close_time">Closing Time : &nbsp;</label><br>
+                    <input type="datetime" name="close_time" id="close_time"><br><br>
+            </fieldset>
+            <fieldset class="owner-registration-asidefieldset">
+                <legend>Update Services offered by Business</legend>
+                <label for="services">Service List : &nbsp;</label><br>
+                    <input type="checkbox" name="hair" id="hair" value="hair">Hair
+                    <input type="checkbox" name="skin" id="skin" value="skin">Skin
+                    <input type="checkbox" name="nail" id="nail" value="nail">Nails
+                    <input type="checkbox" name="massage" id="massage" value="massage">Massage
+                    <input type="checkbox" name="wax" id="wax" value="wax">Wax
+                    <input type="checkbox" name="makeup" id="makeup" value="makeup">MakeUp <br><br>
+
+                    <button type="submit" id="allbuttons">Save</button>
+            </fieldset>
+            
+        </form>
+    </aside>
+</section>
+{% endblock content %}
+
+<!-- {% block script %} {{ super() }} {% endblock script %}
+{% block footer %} {{ super() }} {% endblock footer %} -->
