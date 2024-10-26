@@ -12,13 +12,42 @@
 
 {% block content %}
 <section class="row">
-  
+    <!--To Update Salon Prole-->
     <aside class="col-12">
         <img src="../static/images/staff3.jpeg" alt="Staff image" id="imageproperty">
         <h2 id="articleh2">Business-Name Account</h2>
-        <form action="/home_business" method="post" name="businessinfo" onsubmit= "return validatebusinessinfo();" autocomplete="on">
+
+        {% if msg %}
+        <p style="color: green;"> {{ msg }} </p>
+        {% endif %}
+
+        {% if e %}
+        <p style="color: red;"> {{ e }} </p>
+        {% endif %}
+
+        <form action="/home_business" method="post" name="businessinfo" autocomplete="on">
+            <fieldset class="owner-registration-asidefieldset">
+                <legend>Business Account</legend>
+                {% for i in account %}
+                <label for="spot_id">Spot ID: &nbsp;</label><br>
+                    <input type="text" name="spot_id" id="spot_id" value="{{account['spot_id']}}"><br><br>
+                <label for="role">Role: &nbsp;</label>
+                    <input type="text" name="role" id="role" value="{{account['role']}}"><br><br>
+                <label for="businessname">Business Name: &nbsp;</label><br>
+                    <input type="text" name="businessname" id="businessname" value="{{account['name']}}"><br><br> 
+                <label for="email">Email : &nbsp;</label><br>
+                    <input type="email" name="email" id="email" value="{{ account['email_id']}}"><br><br>
+                <label for="pwd">Enter Password: &nbsp;</label><br>
+                    <input type="password" name="pwd" id="pwd" value="{{ account['password'] }}" ><br>
+                    <small style="color: blue;">Password must contain digit, capital letter and special character</small><br><br>    
+                <br><br><br> 
+                {% endfor %}
+            </fieldset>
+
             <fieldset class="owner-registration-asidefieldset">
                 <legend>Update Contact Information</legend>
+                <label for="phone">Phone No: &nbsp;</label><br>
+                    <input type="tel" name="phone" id="phone" placeholder="12345678912" ><br><br>
                 <label for="city">City : &nbsp;</label><br>
                     <input type="city" name="city" id="city"><br><br>
                 <label for="state">State : &nbsp;</label><br>
@@ -28,10 +57,11 @@
                 <label for="address">Address : &nbsp;</label><br>
                     <textarea name="address" id="address" rows="4" cols="50"></textarea><br><br>
                 <label for="open_time">Opening Time : &nbsp;</label><br>
-                    <input type="datetime" name="open_time" id="open_time"><br><br>
+                    <input type="time" name="open_time" id="open_time"><br><br>
                 <label for="close_time">Closing Time : &nbsp;</label><br>
-                    <input type="datetime" name="close_time" id="close_time"><br><br>
+                    <input type="time" name="close_time" id="close_time"><br><br>
             </fieldset>
+
             <fieldset class="owner-registration-asidefieldset">
                 <legend>Update Services offered by Business</legend>
                 <label for="services">Service List : &nbsp;</label><br>
@@ -46,6 +76,7 @@
             </fieldset>
             
         </form>
+       
     </aside>
 </section>
 {% endblock content %}

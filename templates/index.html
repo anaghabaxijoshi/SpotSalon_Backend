@@ -17,7 +17,7 @@
             <h2 id="articleh2">Spot your nearby Salon</h2>
             <form action="/customer_display.html" method="post" autocomplete="off"> 
                 <fieldset class="homearticlefieldset">
-                    <!--<legend>Spot your nearby Salon</legend>-->
+                    
                 <label for="country">Country: &nbsp;</label>
                 <select name="country" id="country">
                     <option value="a">A</option>
@@ -43,8 +43,15 @@
         </article>
         <aside class="col-6">
             <img src="../static/images/staff3.jpeg" alt="Staff image" id="imageproperty">
-            <form action="/home_business" method="post" name="businesssignin" onsubmit=" return validatebusinesssignin();" autocomplete="off">
+            <form action="/home_business" method="post" name="businesssignin" onsubmit=" return validatebusinesssignin();" autocomplete="on">
                 <h2 id="articleh2">SpotSalon Business Account</h2>
+                {% if msg %}
+                <p style="color: green;"> {{ msg }} </p>
+                {% endif %}
+
+                {% if e %}
+                <p style="color: red;"> {{ e }} </p>
+                {% endif %}
                 <fieldset class="salonsignin">
                     <!--<legend>SpotSalon Account</legend>-->
                     <span id="usernamepwderr"></span><br>
